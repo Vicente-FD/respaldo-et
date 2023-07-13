@@ -1,0 +1,55 @@
+{% extends './baseTodos.html' %}
+
+{% load static %}
+
+{% block body %}
+    <h1>MENU PARA AGREGAR PRODUCTOS</h1>
+
+    <div class="container">
+        <form id="formularioAgregarProducto" action="/editarProductoForm" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="txtSku">SKU:</label>
+                    <input value="{{prod.sku}}" readonly name="txtSku" id="txtSku" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-8">
+                    <label for="txtNombre">Nombre:</label>
+                    <input value="{{prod.nombre}}" name="txtNombre" id="txtNombre" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-4">
+                    <label for="txtStock">Stock:</label>
+                    <input value="{{prod.stock}}" name="txtStock" id="txtStock" type="text" class="form-control">
+                </div>
+
+
+                <div class="col-md-4">
+                    <label for="txtPrecio">Precio:</label>
+                    <input value="{{prod.precio}}" name="txtPrecio" id="txtPrecio" type="number" class="form-control">
+                </div>
+
+
+                <div class="col-md-4">
+                    <label for="fechaVencimientoSel">Fecha de vencimiento:</label>
+                    <input value="{{prod.fechaVencimientoSel}}" type="date" name="fechaVencimientoSel" id="fechaVencimientoSel" type="text" class="form-control">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="txtImg">Imagen URL:</label>
+                    <img src="{{prod.image_url.url}}" alt="">
+                    <input name="txtImg" id="txtImg" type="file" class="form-control">
+                </div>
+            </div>
+            <button class="btn btn-success mt-5 w-100">Editar</button>
+        </form>
+    </div>
+
+
+   
+{% endblock %}
+
+
+{% block script %}
+    <script src="{% static 'js/functionAgregarProducto.js' %}"></script>
+{% endblock %}

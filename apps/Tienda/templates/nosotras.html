@@ -1,0 +1,48 @@
+{% extends './baseTodos.html' %}
+{% load static %}
+
+{% block body %}
+<!----- BODY----->
+<body>
+  <!----- TEXTO-FOTO NOSOTRAS ----->
+  <main>
+    <h2 class="text-center mt-3">¡Nosotras!</h2>
+    <section>
+      <div class="container-fluid fotoNosotras"></div>
+    </section>
+
+    <article class="container">
+      <h3 class="text-center mt-3">¿Quienes somos?</h3>
+      <p class="text-center mx-5 my-3">
+        ¡Hola! Somos parte de PetShop junto con un grupo de amigas que iniciamos un proyecto para ayudar a una fundación sin fines de lucro que se dedica a ayudar a mascotas necesitadas. Comenzamos vendiendo productos como bandanas, correas e identificaciones a través de las redes sociales y la respuesta fue increíble.
+      </p>
+      <p class="text-center mx-5 my-3">
+        Pero con el tiempo, nos dimos cuenta de que la demanda era mayor de lo que podíamos manejar a través de nuestras páginas en redes sociales. Por eso, decidimos crear una página web para poder llegar a más personas y expandir nuestro negocio.
+      </p>
+      <p class="text-center mx-5 my-3">
+        Ahora, en nuestra página web, ofrecemos una gran variedad de productos para mascotas, desde ropa y accesorios hasta alimentos y juguetes. Además, todos nuestros productos son de alta calidad y están disponibles a precios muy accesibles.
+      </p>
+      <p class="text-center mx-5 my-3">
+        Estamos muy emocionadas por seguir creciendo y poder ayudar a más mascotas necesitadas gracias a nuestro proyecto. ¡Te invitamos a visitar nuestra página web y unirte a nuestra misión de ayudar a los animales!
+      </p>
+      <p class="text-center mx-5 my-3">
+        ¡Esperamos te guste nuestra tienda :D!
+      </p>
+      <hr class="hr" />
+    </article>
+  </main>
+  <!----- FIN TEXTO-FOTO NOSOTRAS ----->
+
+    <!-- MAPA / UBICACION DEL LOCAL -->
+    <h2 class="text-center mt-3">¿Donde nos ubicamos?</h2>
+    <div class="container mt-3"><div id="map">
+      </div>
+    </div>
+    <!-- FIN MAPA / UBICACION DEL LOCAL --> 
+</body>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/mapa.js' %}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends './baseTodos.html' %}
+{% load static %}
+
+{% block body %}
+<!----- BODY----->
+<body>
+    <!----- CARRITO ----->
+    <div class="container mt-4">
+      <div class="row">
+          <!-- Elementos generados a partir del JSON -->
+          <main id="items" class="col-sm-8 row"></main>
+          <!-- Carrito -->
+          <aside class="col-sm-4">
+              <h2>Carrito</h2>
+              <!-- Elementos del carrito -->
+              <ul id="carrito" class="list-group"></ul>
+              <hr>
+              <!-- Precio total -->
+              <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+              <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+              <button id="boton-borrar" class="btn btn-danger">Borrar 1</button>
+          </aside>
+      </div>
+  </div>
+<!----- FIN CARRITO ----->
+</body>
+<!----- FIN BODY ----->
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'js/carrito.js' %}"></script>
+{% endblock %}

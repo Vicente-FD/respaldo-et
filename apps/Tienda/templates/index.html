@@ -1,0 +1,79 @@
+{% extends './baseTodos.html' %}
+{% load static %}
+
+
+{% block body %}
+    <main>
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'img/carrousel.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'img/carrousel2.jpg' %}" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </main>
+    <!----- FIN HEADER ----->
+    <!----- CARDS ----->
+    <div class="container" >
+      <h3 class="text-center mt-4">En nuestra tienda encontrarás</h3>
+      <div class="row justify-content-center">
+        <div class="card mr-1 mb-1" id="idcard" style="width: 18rem">
+          <img src="{% static 'img/ADOPTA.jpg' %}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Todo para tu mascota</h5>
+          </div>
+        </div>
+    
+        <div class="card mr-1 mb-1" id="idcard"  style="width: 18rem">
+          <img src="{% static 'img/gatoss.jpg'%}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Todo para tu gatuno</h5>
+          </div>
+        </div>
+    
+        <div class="card mr-1 mb-1" id="idcard" style="width: 18rem">
+          <img src="{% static 'img/exoticos.jpg'%}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Todo para tu exótico</h5>
+          </div>
+        </div>
+    
+        <div class="card mr-1 mb-1" id="idcard" style="width: 18rem">
+          <img src="{% static 'img/Sin título-1.jpg'%}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Todo para tu perruno</h5>
+          </div>
+        </div>
+    
+        <div class="card mr-1 mb-1" id="idcard" style="width: 18rem">
+          <img src="{% static 'img/pelu.jpg'%}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Peluquería</h5>
+          </div>
+        </div>
+    
+        <div class="card mr-1 mb-1" id="idcard" style="width: 18rem">
+          <img src="{%static 'img/ADOPTA.jpg'%}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Un nuevo amigo </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <!----- FIN CARDS ----->
+{% endblock %}
+
+
